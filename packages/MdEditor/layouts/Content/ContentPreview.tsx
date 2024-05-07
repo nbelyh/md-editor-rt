@@ -11,7 +11,9 @@ const ContentPreview = (props: ContentPreviewProps) => {
   const { editorId, previewTheme, showCodeRowNumber } = useContext(EditorContext);
 
   // markdown => html
-  const { html, key } = useMarkdownIt(props, !!previewOnly);
+  const { html: rendered, key } = useMarkdownIt(props, !!previewOnly);
+  // 如果启用了预览HTML转换，则使用
+  const html = props.transformPreviewHtml ? props.transformPreviewHtml(rendered) : rendered;
   // 复制代码
   useCopyCode(props, html, key);
   // 图片点击放大

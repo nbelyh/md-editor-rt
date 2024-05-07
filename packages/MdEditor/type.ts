@@ -284,6 +284,12 @@ export interface MdPreviewProps {
    * @returns
    */
   sanitizeMermaid?: (html: string) => Promise<string>;
+  /**
+   * 可选的预览HTML转换
+   * @param t 
+   * @returns 转换后的字符串
+   */
+  transformPreviewHtml?: (t: string) => string;
 }
 
 export interface EditorProps extends MdPreviewProps {

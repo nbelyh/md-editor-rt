@@ -151,6 +151,7 @@ export default () => {
 | showToolbarName | `boolean` | false | 是否在工具栏下面显示对应的文字名称 |
 | inputBoxWitdh | `string` | '50%' | 输入框默认的宽度 |
 | transformImgUrl | `(imgUrl: string) => string \| Promise<string>` | t => t | 转换图片链接 |
+| transformPreviewHtml | `(imgUrl: string) => string` | t => t | 可选的预览HTML转换 |
 
 > 如果你重新定义了标题，请务必通过`mdHeadingId`告诉编辑器你生成标题 ID 的算法。以便生成的内部目录能够正确导航。
 

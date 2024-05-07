@@ -72,7 +72,8 @@ const Editor = forwardRef((props: EditorProps, ref: ForwardedRef<unknown>) => {
     language = defaultProps.language,
     inputBoxWitdh = defaultProps.inputBoxWitdh,
     sanitizeMermaid = defaultProps.sanitizeMermaid,
-    transformImgUrl = defaultProps.transformImgUrl
+    transformImgUrl = defaultProps.transformImgUrl,
+    transformPreviewHtml = defaultProps.transformPreviewHtml
   } = props;
 
   const [staticProps] = useState<StaticProps>(() => {
@@ -199,6 +200,7 @@ const Editor = forwardRef((props: EditorProps, ref: ForwardedRef<unknown>) => {
           onInputBoxWitdhChange={props.onInputBoxWitdhChange}
           sanitizeMermaid={sanitizeMermaid}
           transformImgUrl={transformImgUrl}
+          transformPreviewHtml={transformPreviewHtml}
         />
         {footers?.length > 0 && (
           <Footer

@@ -154,6 +154,7 @@ Except for the same as `MdPreview`:
 | showToolbarName | `boolean` | false | Show toolbar name or not |
 | inputBoxWitdh | `string` | '50%' | Default width of input box |
 | transformImgUrl | `(imgUrl: string) => string \| Promise<string>` | t => t | Transform image links |
+| transformPreviewHtml | `(html: string) => string` | t => t | Optional transform of preview HTML |
 
 <details>
  <summary>『toolbars』</summary>
